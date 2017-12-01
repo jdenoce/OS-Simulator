@@ -1,0 +1,17 @@
+#include <iostream>
+#include <sys/time.h>
+
+
+class Timer {
+ public:
+  Timer();
+  ~Timer();
+
+  void start();
+  long double elapsed_time();
+  long double elapsed_milli();
+  
+ private:
+  struct timeval time;
+  double long start_time;
+};
